@@ -22,8 +22,6 @@ export default function CreateProduct() {
     shipping: true,
   });
 
-  console.log(products)
-
   const toggleSection = (section: keyof typeof visibleSections) => {
     setVisibleSections((prev) => ({
       ...prev,

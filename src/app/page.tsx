@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col  bg-gray-50 px-[20px] w-full h-full ">
+    <div className="flex flex-col  px-[20px] w-full h-full ">
     <div className="flex flex-col items-center justify-center ">
 
       {/* Welcome Illustration */}
@@ -51,5 +51,4 @@ export default function Home() {
   );
 }
 
-// Add this export to enable static site generation
-export const dynamic = 'force-static';
+

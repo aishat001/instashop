@@ -16,8 +16,6 @@ export default function GetStarted() {
   const [contactInfo, setContactInfo] = useState('');
 
 
-console.log(user)
-
 useEffect(() => {
   const queryStep = new URLSearchParams(window.location.search).get('step');
   if (queryStep) {
