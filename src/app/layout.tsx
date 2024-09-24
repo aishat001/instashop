@@ -42,7 +42,7 @@ export default function RootLayout({
         className={`${dm_Sans.className}  antialiased`}
       >
         {/* <div className="max-w-[360px] shadow mx-auto"> */}
-        <div className="max-w-[360px] mx-auto flex flex-col items-center   h-screen overflow-y-auto bg-white  pb-[40px]">
+        <div className="max-w-[360px] mx-auto flex flex-col items-center   h-screen overflow-y-auto bg-white ">
 
         {children}
 

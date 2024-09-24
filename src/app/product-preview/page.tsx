@@ -160,7 +160,7 @@ export default function ProductPreview() {
 
 <hr/>
       {/* Publish Button */}
-      <div className="w-full px-[20px] mt-auto pt-8">
+      <div className="w-full px-[20px] mt-auto pt-8 pb-[40px]">
         <Button onClick={() => { }}>Publish</Button>
       </div>
     </div >

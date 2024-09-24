@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       {/* Get Started Button */}
-      <div className="mt-auto w-full mt-10">
+      <div className="mt-auto w-full mt-10  pb-[40px]">
       <Link
         href="/get-started"
         className="mt-auto bg-purple text-white w-full text-center py-3 px-6 text-center justify-center rounded-full flex "

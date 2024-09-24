@@ -214,8 +214,10 @@ const handleNextStep = () => {
             </>
           )}
         </div>
+<div className=' pb-[40px]'>
+<Button onClick={handleNextStep}>{step < 3 ? 'Continue' : 'Finish'}</Button>
 
-        <Button onClick={handleNextStep}>{step < 3 ? 'Continue' : 'Finish'}</Button>
+</div>
       </div>
     </div>
   );

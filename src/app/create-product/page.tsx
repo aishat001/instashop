@@ -506,7 +506,7 @@ export default function CreateProduct() {
 
       <hr />
       {/* Cancel and Save Buttons */}
-      <div className="grid grid-cols-2 gap-4 justify-between mt-auto px-[20px] pt-8">
+      <div className="grid grid-cols-2 gap-4 justify-between mt-auto px-[20px] pt-8 pb-[40px]">
         <button
           className=" py-3 text-gray-600 border border rounded-[90px]"
           onClick={() => router.back()}
