@@ -74,9 +74,13 @@ const handleNextStep = () => {
       <button 
         className="text-black text-[16px] py-[9px] text-start flex flex-row items-center gap-[12px] font-[600]" 
         onClick={() => {
+          if (step === 1) {
+            router.push(`/`); 
+
+          }
           if (step > 1) {
             setStep(step - 1);
-            router.push(`?step=${step - 1}`); // Update URL with the new step
+            router.push(`?step=${step - 1}`); 
           }
         }}
       >
