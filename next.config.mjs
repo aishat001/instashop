@@ -9,10 +9,37 @@ const nextConfig = {
 }
 }
 
+
 export default withPWA({
     dest: "public",        
     disable: process.env.NODE_ENV === "development",     
-    skipWaiting: true,     
+    skipWaiting: true,  
+        register: true,
+        skipWaiting: true,
+        runtimeCaching: [
+          {
+            urlPattern: '/',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'welcome-page-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
+              },
+            },
+          },
+          {
+            urlPattern: '/product-preview',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'product-preview-page-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
+              },
+            },
+          },
+        ]   
 })(nextConfig);
 
 // export default {

@@ -39,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_Sans.className}  antialiased bg-white`}
+        className={`${dm_Sans.className}  antialiased bg-white   h-screen overflow-y-auto`}
       >
         {/* <div className="max-w-[360px] shadow mx-auto"> */}
-        <div className="max-w-[400px] mx-auto flex flex-col items-center   h-screen overflow-y-auto bg-white ">
+        <div className="max-w-[400px] mx-auto flex flex-col items-center h-full  bg-white ">
 
         {children}
 
