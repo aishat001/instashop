@@ -16,6 +16,9 @@ export default withPWA({
     skipWaiting: true,  
         register: true,
         skipWaiting: true,
+        fallbacks: {
+          document: "/offline",
+        },
         runtimeCaching: [
           {
             urlPattern: '/',
