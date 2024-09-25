@@ -5,15 +5,12 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import InputField from '../../components/InputField';
 import Button from '../../components/Button';
-import { Store, useAppStore, User } from '@/store.ts/useStore';
+import { useAppStore } from '@/store.ts/useStore';
 
 export default function GetStarted() {
   const router = useRouter();
-  const { user, store, product, setUser, setStore, setProduct } = useAppStore();
+  const { user, store, setUser, setStore } = useAppStore();
   const [step, setStep] = useState(1);
-
-  // Form state management
-  const [contactInfo, setContactInfo] = useState('');
 
 
 useEffect(() => {
@@ -33,7 +30,6 @@ const handleNextStep = () => {
 };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
     if (step === 1) {
       setUser({
         ...user,

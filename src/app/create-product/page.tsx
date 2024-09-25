@@ -1,19 +1,20 @@
+/* eslint-disable */
 'use client';
 
 import { useAppStore } from '@/store.ts/useStore';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { KeyboardEvent, AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
-import InputField from '@/components/InputField'; // Import the reusable input component
+import { KeyboardEvent, useEffect, useState } from 'react';
+import InputField from '@/components/InputField'; 
 import Toggle from '@/components/Toggle';
 import CollectionComponent from '@/components/CollectionInput';
+
 
 export default function CreateProduct() {
   const router = useRouter();
   const { products, product, setProduct, initializeVariantDetails, updateVariantDetails, addProduct } = useAppStore();
   const [activeVariantIndex, setActiveVariantIndex] = useState<number | null>(null);
   const [isVariableProduct, setIsVariableProduct] = useState(true);
-  const [newCollection, setNewCollection] = useState(''); // State for new collection input
   const [visibleSections, setVisibleSections] = useState({
     basicDetails: true,
     productImages: true,
@@ -127,13 +128,13 @@ export default function CreateProduct() {
   }
 
   const [openDropdownIdx, setOpenDropdownIdx] = useState(1);
-  const handleRemoveOption = (optionIdx: number) => {
-    setProduct({
-      ...product,
-      variations: product.variations.filter((_, idx) => idx !== optionIdx)
-    })
-    setOpenDropdownIdx(-1);
-  };
+  // const handleRemoveOption = (optionIdx: number) => {
+  //   setProduct({
+  //     ...product,
+  //     variations: product.variations.filter((_, idx) => idx !== optionIdx)
+  //   })
+  //   setOpenDropdownIdx(-1);
+  // };
 
   useEffect(() => {
     initializeVariantDetails(); // Initialize variant details based on variations

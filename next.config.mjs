@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-/** @type {import('next').NextConfig} */
 import withPWA from 'next-pwa';
 
 const nextConfig = {
